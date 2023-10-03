@@ -11,7 +11,7 @@ class ListsController < ApplicationController
       flash[:notice] = "投稿に成功しました。"
       redirect_to list_path(@list.id)
     else
-      # 失敗バージョンも忘れずに。
+      # 投稿に失敗した場合のフラッシュメッセージ
       flash.now[:alert] = "投稿に失敗しました。"
       render :new
     end
